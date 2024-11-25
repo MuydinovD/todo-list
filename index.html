@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./css/output.css">
+     <title>5.8-dars vazifa</title>
+
+</head>
+
+<body>
+     <form class="w-96 mx-auto">
+          <h1 class="text-4xl my-5 font-bolt text-center">
+               Fill This Form
+          </h1>
+          <label class="form-control w-full">
+               <div class="label">
+                 <span class="label-text">Name:</span>
+               </div>
+               <input 
+               type="text" 
+               placeholder="Type here" 
+               class="input input-bordered w-full"
+               id = "firstName" />
+             </label>
+             <label class="form-control w-full">
+               <div class="label">
+                 <span class="label-text">Age:</span>
+               </div>
+               <input 
+               type="text" 
+               placeholder="Type here" 
+               class="input input-bordered w-full"
+               id = "age" />
+             </label>
+             <label class="form-control">
+              <div class="label">
+                <span class="label-text">Bio:</span>
+              </div>
+              <input  
+               type="text" 
+               placeholder="Bio" 
+               class="input input-bordered w-full"
+               id = "bio" />
+            </label>
+             <button class="btn btn-secondary my-10 btn-block">Submit</button>
+     </form>
+
+     <!-- js -->
+      <div class="cards">
+        <div class="text text-center">
+          <h3 id="userCount" class="font-semibold text-xl" >All Users: 0</h3>
+        </div>
+          <div class="overflow-x-auto">
+            <table class="table max-w-4xl mx-auto px-5 space-x-6">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th class="px-5">Name</th> 
+                  <th class="px-5">Bio</th>
+                  <th class="px-5">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <template>
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <div class="avatar">
+                        <div class="mask mask-squircle h-8 w-8">
+                          <img
+                            src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                            alt="Avatar Tailwind CSS Component" 
+                            class="avatar-image"
+                            />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-bold user-name">Hart Hagerty</div>
+                        <div class="text-sm opacity-50 age">Age: 28</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="bio" >
+                  </td>
+                  <th>
+                    <button 
+                    onclick="deleteItem()" 
+                    class="btn btn-secondary btn-xs delete-btn">
+                    delete
+                  </button>
+                  </th>
+                </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+      </div>
+      <script src="./js/app.js"></script>
+</body>
+</html>
